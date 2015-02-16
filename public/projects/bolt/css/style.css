@@ -1,0 +1,310 @@
+/*
+	Created by Jefry Cruz
+	November 2 2013
+	Dont be afraid to customise!
+*/
+
+/*
+	GLOBALS
+*/
+
+html,
+body{
+	font-size: 16px;
+	width: 100%;
+	font-family: sans-serif, helvetica, calibri, arial;
+}
+
+.wrapper{
+	width: 100%;
+}
+
+.download-container{
+	position: absolute;
+	top: 20px;
+	left: 20px;
+}
+
+.download-container button{
+	padding: 10px 15px;
+	font-size: 1.2em;
+	color: #FCFFF8;
+	background-color: #7E989F;
+	border: 5px solid #FFD197;
+	text-indent: 25px;
+	background-image: url('../img/arrow-down.png');
+	background-repeat: no-repeat;
+	background-position: 8px center;
+
+
+}
+
+	.download-container button:hover{
+		background-color: #5E7277;
+	}
+
+/*  TOP HALF */
+.top-half-wrapper{
+	width: 100%;
+	height: 350px;
+	background-color: #febf5d;
+
+	-webkit-box-shadow: 0 4px 0 #C89649, 0 8px 0 #CA4B3A, 0 12px 0 #9EBEC7;
+	-moz-box-shadow: 0 4px 0 #C89649, 0 8px 0 #CA4B3A, 0 12px 0 #9EBEC7;
+	box-shadow: 0 4px 0 #C89649, 0 8px 0 #CA4B3A, 0 12px 0 #9EBEC7;
+}
+
+.top-half-container{
+	width: 800px;
+	margin: 0 auto;
+	position: relative;
+	top: 30%;
+}
+
+
+#iphone{
+	float: left;
+	background: url('../img/woman.png') no-repeat;
+	background-position: 35px 102px;
+	-webkit-animation: fade 20s linear forwards infinite;
+	-moz-animation: fade 20s linear forwards infinite;
+	-o-animation: fade 20s linear forwards infinite;
+	animation: fade 20s linear forwards infinite;
+}
+
+.cycle img{
+	position: absolute;
+	left: 30px;
+	top: 100px;
+}
+
+.top-half-container header,
+.top-half-container section{
+	float: right;
+}
+
+.top-half-container header{
+	margin-right: 100px;
+}
+
+.top-half-container section{
+	width: 55%;
+	background-color: #e7ecef;
+	color: #333;
+	box-sizing: border-box;
+	padding: 10px;
+	border: 3px solid white;
+	border-radius: 2px;
+	float: right;
+	font-size: 1.2em;
+}
+
+/*  BOTTOM HALF */
+.bottom-half-wrapper{
+	width: 100%;
+}
+
+.bottom-half-container{
+	width: 600px;
+	margin: 0 auto;
+}
+
+nav ul{
+	list-style: none;
+	padding: 0;
+	float: right;
+	padding-top: 10%;
+	position: relative;
+	bottom: 300px;
+	left: 100px;
+}
+
+nav ul li{
+	float: left;
+	margin-right: 40px;
+}
+
+.bottom-half-container p{
+	position: relative;
+	left: 20%;
+	padding-top: 35%;
+	color: #ccc;
+	text-align: left;
+	font-size: .9em;
+}
+
+.bottom-half-container p span,
+a{
+	color: #93B6BF;
+	text-decoration: none;
+}
+
+.hide-on-desktop{
+	display: none;
+}
+
+
+
+/* MEDIA QUERIES */
+
+@media screen and (max-width:  850px){
+	html,
+	body{
+		background-color: #febf5d;
+		font-size: 18px
+	}
+
+	.hide-on-desktop{
+		display: block;
+	}
+
+	.hide-on-mobile{
+		display: none;
+	}
+
+	#sthoverbuttons{
+		display: none;
+	}
+
+	/* TOP HALF */
+	.top-half-wrapper{
+		width: 100%;
+		height: auto;
+		box-shadow: none;
+		-webkit-box-shadow: none;
+		-moz-box-shadow: none;
+	}
+
+	.top-half-container{
+		width: 100%;
+		margin: 0 auto;
+	}
+
+	.top-half-container .thumb{
+		max-width: 95%;
+		margin: 5% auto;
+		border: 3px solid #FED891;
+		box-sizing: border-box;
+	}
+
+	#iphone{
+		display: none;
+	}
+
+	.top-half-container header,
+	.top-half-container section{
+		float: none;
+	}
+
+	.top-half-container header{
+		margin-right: 0;
+		margin-top: 10px;
+	}
+
+	.top-half-container header img{
+		display: block;
+		max-width: 100%;
+		margin: 0 auto;
+	}
+
+	.top-half-container section{
+		width: 95%;
+		margin: 5% auto;
+		padding: 5%;
+		border-radius: 0;
+	}
+
+
+	/* BOTTOM HALF*/
+	.bottom-half-container{
+		width: 100%;
+	}
+
+	nav ul{
+		position: static;
+		float: none;
+		overflow: hidden;
+		width: 100%;
+		margin: 0 auto;
+	}
+
+	nav ul li{
+		margin: 0;
+		float: none;
+	}
+
+	nav ul li a img{
+		display: block;
+		max-width: 100%;
+		margin: 0 auto;
+	}
+
+	nav ul li:nth-child(1){
+		margin: 2% 0;
+	}
+
+	.bottom-half-container p{
+		position: static;
+		text-align: center;
+		color: #6F5428;
+		padding-top: 10%;
+		clear: both;
+	}
+
+}
+
+
+
+
+
+
+
+
+
+
+/*---------------------------------
+			ANIMATIONS
+---------------------------------*/
+
+@-webkit-keyframes fade{
+	20% { background: url('../img/woman.png'); background-position: 35px 102px;  }
+
+	40% { background: url('../img/tree.png'); background-position: 35px 102px;  }
+	50% { background: url('../img/tree.png'); background-position: 35px 102px;  }
+
+	70% { background: url('../img/camera.png'); background-position: 35px 102px; }
+	80% { background: url('../img/camera.png'); background-position: 35px 102px; }
+}
+
+@-moz-keyframes fade{
+	20% { background: url('../img/woman.png'); background-position: 35px 102px;  }
+
+	40% { background: url('../img/tree.png'); background-position: 35px 102px;  }
+	50% { background: url('../img/tree.png'); background-position: 35px 102px;  }
+
+	70% { background: url('../img/camera.png'); background-position: 35px 102px; }
+	80% { background: url('../img/camera.png'); background-position: 35px 102px; }
+}
+
+@-o-keyframes fade{
+	20% { background: url('../img/woman.png'); background-position: 35px 102px;  }
+
+	40% { background: url('../img/tree.png'); background-position: 35px 102px;  }
+	50% { background: url('../img/tree.png'); background-position: 35px 102px;  }
+
+	70% { background: url('../img/camera.png'); background-position: 35px 102px; }
+	80% { background: url('../img/camera.png'); background-position: 35px 102px; }
+}
+
+@keyframes fade{
+	20% { background: url('../img/woman.png'); background-position: 35px 102px;  }
+
+	40% { background: url('../img/tree.png'); background-position: 35px 102px;  }
+	50% { background: url('../img/tree.png'); background-position: 35px 102px;  }
+
+	70% { background: url('../img/camera.png'); background-position: 35px 102px; }
+	80% { background: url('../img/camera.png'); background-position: 35px 102px; }
+}
+
+
+
